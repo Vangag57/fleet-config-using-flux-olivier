@@ -4,4 +4,4 @@ resources:
 - rocky-cluster-role.yaml
 - rbac.yaml
 - sync.yaml
-- M6-rocky-ingress.yaml
+- rocky-ingress.yaml
