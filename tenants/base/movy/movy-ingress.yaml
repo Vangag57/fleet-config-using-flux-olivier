@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: rocky
-  namespace: rocky-test
+  name: movy
+  namespace: movy-test
 spec:
   ingressClassName: nginx
   rules:
-    - host: rocky-test.mybestdomain.com
+    - host: movy-test.mybestdomain.com
       http:
         paths:
           - path: /
@@ -16,4 +16,3 @@ spec:
                 name: web
                 port:
                   number: 80
-

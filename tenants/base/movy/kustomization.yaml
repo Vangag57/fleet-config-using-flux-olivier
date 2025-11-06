@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- rocky-cluster-role.yaml
+- movy-cluster-role.yaml
 - rbac.yaml
 - sync.yaml
-- rocky-ingress.yaml
+- movy-ingress.yaml

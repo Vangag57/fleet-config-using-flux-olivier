@@ -2,8 +2,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  namespace: rocky-test
-  name: rocky-full-access
+  namespace: movy-test
+  name: movy-full-access
 rules:
 - apiGroups: ["", extensions, apps]
   resources: [deployments, replicasets, pods, services, ingresses, statefulsets]
@@ -12,7 +12,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: rocky-pv-access
+  name: movy-pv-access
 rules:
 - apiGroups: [""]
   resources: [persistentvolumes]
@@ -22,17 +22,16 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   labels:
-    toolkit.fluxcd.io/tenant: rocky
-  name: rocky-reconciler2
+    toolkit.fluxcd.io/tenant: movy
+  name: movy-reconciler2
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: rocky-pv-access
+  name: movy-pv-access
 subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: User
-  name: gotk:rocky-test:reconciler
+  name: gotk:movy-test:reconciler
 - kind: ServiceAccount
-  name: rocky
-  namespace: rocky-test
-  
+  name: movy
+  namespace: movy-test
