@@ -4,4 +4,5 @@ metadata:
   name: movy
   namespace: movy-test
 spec:
+  targetNamespace: movy-test
   path: ./k8s/plain
