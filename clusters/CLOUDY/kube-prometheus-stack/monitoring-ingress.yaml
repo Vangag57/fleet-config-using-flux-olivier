@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: movy
-  namespace: movy-test
+  name: monitoring
+  namespace: monitoring
 spec:
   ingressClassName: nginx
   rules:
-    - host: movy-test.mybestdomain.com
+    - host: monitoring.mybestdomain.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: prometheus-stack-grafana
+                name: kube-prometheus-stack-grafana
                 port:
                   number: 80

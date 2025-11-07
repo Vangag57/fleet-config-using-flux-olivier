@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - sync.yaml
 - monitoring-components.yaml
+- monitoring-ingress.yaml
