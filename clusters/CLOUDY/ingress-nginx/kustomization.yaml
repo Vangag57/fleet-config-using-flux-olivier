@@ -4,9 +4,9 @@ resources:
 - ingress-nginx-components.yaml
 - sync.yaml
 patches:
-  - path: ingress-nginx-cm-patch.yaml
+  - path: ingress-nginx-cm-patch.yaml 
     target:
       kind: ConfigMap
-  - path: ingress-nginx-svc-patch.yaml
+  - path: ingress-nginx-svc-patch.yaml 
     target:
       kind: Service
